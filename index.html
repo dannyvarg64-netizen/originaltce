@@ -7,27 +7,25 @@
     <style>
         :root {
             /* Paleta de Colores Profesional TCE */
-            --primary-navy: #002D62; /* Azul Marino Corporativo para encabezados y bordes */
-            --primary-blue: #0056b3; /* Azul para elementos interactivos */
-            --secondary-bg: #f4f7f6; /* Fondo gris muy tenue para descanso visual */
-            --border-color: #d1d9e0; /* Color de bordes sutil */
-            --text-main: #212529; /* Texto principal casi negro */
-            --text-muted: #6c757d; /* Texto secundario gris */
-            --danger-red: #d32f2f; /* Rojo profesional para alertas */
-            --success-green: #1f7246; /* Verde Ejecutivo para el botón de enviar */
+            --primary-navy: #002D62; 
+            --primary-blue: #0056b3; 
+            --secondary-bg: #f4f7f6; 
+            --border-color: #d1d9e0; 
+            --text-main: #212529; 
+            --text-muted: #6c757d; 
+            --danger-red: #d32f2f; 
+            --success-green: #1f7246; 
             --white: #ffffff;
             
-            /* Sombreado Profesional */
             --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
             --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
         }
 
-        /* Reset general para consistencia móvil */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            -webkit-tap-highlight-color: transparent; /* Quita el flash azul al tocar en móvil */
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
@@ -35,7 +33,7 @@
             line-height: 1.5;
             color: var(--text-main);
             background-color: var(--secondary-bg);
-            padding: 15px; /* Espaciado para móviles */
+            padding: 15px;
         }
 
         @media (min-width: 768px) {
@@ -49,14 +47,13 @@
             padding: 20px;
             border-radius: 12px;
             box-shadow: var(--shadow-md);
-            border-top: 6px solid var(--primary-navy); /* Toque corporativo arriba */
+            border-top: 6px solid var(--primary-navy);
         }
 
         @media (min-width: 768px) {
             .container { padding: 35px; }
         }
 
-        /* Encabezado Profesional */
         header {
             text-align: center;
             margin-bottom: 25px;
@@ -86,10 +83,9 @@
             font-size: 0.95em;
         }
 
-        /* Datos de Encabezado - Grid Ajustable para Móvil */
         .header-info {
             display: grid;
-            grid-template-columns: 1fr; /* Una columna en móvil */
+            grid-template-columns: 1fr;
             gap: 12px;
             background: #f8f9fa;
             padding: 18px;
@@ -99,11 +95,11 @@
         }
 
         @media (min-width: 480px) {
-            .header-info { grid-template-columns: 1fr 1fr; } /* Dos columnas en tablets */
+            .header-info { grid-template-columns: 1fr 1fr; }
         }
 
         @media (min-width: 768px) {
-            .header-info { grid-template-columns: repeat(4, 1fr); } /* Cuatro en desktop */
+            .header-info { grid-template-columns: repeat(4, 1fr); }
         }
 
         .form-group {
@@ -116,21 +112,20 @@
             margin-bottom: 4px;
             font-size: 0.85em;
             color: var(--primary-navy);
-            text-transform: uppercase; /* Estilo formulario industrial */
+            text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
-        /* Estilo Unificado para Inputs, Selects y Textareas */
         input, select, textarea {
             padding: 10px 12px;
             border: 1px solid var(--border-color);
             border-radius: 6px;
-            font-size: 15px; /* Evita zoom automático en iOS */
+            font-size: 15px;
             color: var(--text-main);
             background-color: var(--white);
             transition: border-color 0.2s, box-shadow 0.2s;
             width: 100%;
-            -webkit-appearance: none; /* Uniformidad en selects iOS/Android */
+            -webkit-appearance: none;
         }
 
         input:focus, select:focus, textarea:focus {
@@ -139,7 +134,6 @@
             box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
         }
 
-        /* Estilo especial para el input de solo lectura */
         input[readonly] {
             background-color: #e9ecef;
             color: var(--primary-navy);
@@ -147,28 +141,17 @@
             cursor: not-allowed;
         }
 
-        /* Selectores de Área - Mejorados para Móvil */
         .selectors-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 15px;
             background: var(--white);
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 20px;
-            border: 2px solid var(--primary-navy); /* Resalta la zona de selección */
+            border: 2px solid var(--primary-navy);
             box-shadow: var(--shadow-sm);
         }
 
-        @media (min-width: 768px) {
-            .selectors-grid { grid-template-columns: 1fr 1fr; }
-        }
-
-        .selectors-grid label {
-            font-size: 0.9em;
-        }
-
-        /* Selects más grandes para tocar fácilmente en móvil */
         .selectors-grid select {
             padding: 12px;
             font-weight: 600;
@@ -189,7 +172,6 @@
             padding: 0 10px;
         }
 
-        /* Tarjetas de Inspección (Inspeccion-item) - Rediseño Total */
         .inspeccion-item {
             background: var(--white);
             border: 1px solid var(--border-color);
@@ -197,10 +179,9 @@
             margin-bottom: 12px;
             transition: transform 0.15s ease, box-shadow 0.15s ease;
             box-shadow: var(--shadow-sm);
-            overflow: hidden; /* Mantiene el borde de deficiencia dentro */
+            overflow: hidden;
         }
 
-        /* Efecto sutil al pasar el mouse (solo desktop) */
         @media (min-width: 768px) {
             .inspeccion-item:hover {
                 transform: translateY(-2px);
@@ -210,12 +191,11 @@
 
         .inspeccion-main {
             display: flex;
-            flex-direction: column; /* Apilado en móvil por defecto */
+            flex-direction: column;
             padding: 16px;
             gap: 12px;
         }
 
-        /* Alineación horizontal en pantallas más grandes */
         @media (min-width: 480px) {
             .inspeccion-main {
                 flex-direction: row;
@@ -225,7 +205,6 @@
             }
         }
 
-        /* Label del Checkbox - Área de toque grande */
         .check-label {
             display: flex;
             align-items: flex-start;
@@ -235,12 +214,12 @@
         }
 
         .check-label input[type="checkbox"] {
-            width: 22px; /* Checkbox más grande para móvil */
+            width: 22px;
             height: 22px;
-            margin-top: 2px; /* Alinea con la primera línea de texto */
+            margin-top: 2px;
             cursor: pointer;
-            accent-color: var(--primary-blue); /* Color moderno para el check */
-            flex-shrink: 0; /* Evita que el checkbox se aplaste */
+            accent-color: var(--primary-blue);
+            flex-shrink: 0;
         }
 
         .punto-texto {
@@ -255,7 +234,6 @@
             margin-right: 3px;
         }
 
-        /* Badge de Estado Profesional */
         .badge-estado {
             font-size: 0.75em;
             font-weight: 700;
@@ -266,17 +244,16 @@
             background: #e9ecef;
             color: var(--text-muted);
             white-space: nowrap;
-            align-self: flex-start; /* Alinea a la izquierda en móvil apilado */
+            align-self: flex-start;
         }
 
         @media (min-width: 480px) {
-            .badge-estado { align-self: center; } /* Centrado vertical en horizontal */
+            .badge-estado { align-self: center; }
         }
 
-        /* Estado: Con Deficiencia (Cambios Visuales Profundos) */
         .inspeccion-item.con-deficiencia {
             border-left: 6px solid var(--danger-red);
-            background-color: #fff8f8; /* Fondo rosado muy tenue */
+            background-color: #fff8f8;
             border-color: #ffcccc;
         }
 
@@ -290,12 +267,11 @@
             color: var(--white);
         }
 
-        /* Panel de Riesgos Desplegable */
         .panel-deficiencia {
             display: none;
             margin-top: 0;
             padding: 16px;
-            background-color: rgba(211, 47, 47, 0.03); /* Fondo alerta muy suave */
+            background-color: rgba(211, 47, 47, 0.03);
             border-top: 1px solid #ffcccc;
             grid-template-columns: 1fr;
             gap: 15px;
@@ -311,13 +287,11 @@
             font-weight: 600;
         }
 
-        /* Ajuste Textarea para notas */
         textarea {
-            resize: vertical; /* Solo redimensionar verticalmente */
+            resize: vertical;
             min-height: 60px;
         }
 
-        /* Botón de Enviar Ejecutivo */
         .actions-panel {
             display: flex;
             margin-top: 35px;
@@ -333,7 +307,7 @@
             font-size: 1.1em;
             font-weight: 700;
             cursor: pointer;
-            background-color: var(--success-green); /* Verde Corporativo */
+            background-color: var(--success-green);
             transition: background-color 0.2s, transform 0.1s;
             box-shadow: 0 4px 6px rgba(31, 114, 70, 0.2);
             text-transform: uppercase;
@@ -348,11 +322,6 @@
         .btn-excel:active {
             transform: translateY(1px);
             box-shadow: 0 2px 3px rgba(31, 114, 70, 0.2);
-        }
-
-        /* Fix para h2 en seccion Otros (margin) */
-        #otros-contenedor h2 {
-            margin-top: 10px;
         }
     </style>
 </head>
@@ -385,7 +354,7 @@
 
     <div class="selectors-grid">
         <div class="form-group">
-            <label for="area-select">1. Áreas de Planta</label>
+            <label for="area-select">Seleccione Área de Planta</label>
             <select id="area-select" onchange="cambiarArea()">
                 <option value="">-- Seleccione Área --</option>
                 <option value="area1">1.- PATIO DE VIAS</option>
@@ -398,31 +367,11 @@
                 <option value="area8">8.- MUELLE # 5 NORTE</option>
             </select>
         </div>
-
-        <div class="form-group">
-            <label for="otros-select">2. Inspecciones Especiales</label>
-            <select id="otros-select" onchange="cambiarOtros()">
-                <option value="">-- Seleccione Control --</option>
-                <option value="otro0">Calibración de Atmosferas</option>
-                <option value="otro1">Inspección de Escaleras Portátiles</option>
-                <option value="otro2">Inspección de Respirador (No adecuado)</option>
-                <option value="otro3">Inspección de Tanque de Diesel</option>
-                <option value="otro4">Inspección a Unidades de Ferrocarril</option>
-                <option value="otro5">Inspección de Sistema Contra incendios</option>
-                <option value="otro6">Inspección a extintor</option>
-                <option value="otro7">Prueba de GFCI</option>
-                <option value="otro8">Inspección de Equipo de Rescate</option>
-                <option value="otro9">Contenido de Kit. Primeros auxilios</option>
-                <option value="otro10">Detector de CO2</option>
-                <option value="otro11">Prueba Anual válvula compresor</option>
-            </select>
-        </div>
     </div>
 
-    <p class="instruction-text" id="instruccion-texto">Seleccione una zona arriba. Use la casilla si detecta anomalías.</p>
+    <p class="instruction-text" id="instruccion-texto">Seleccione una zona de la planta arriba para comenzar el recorrido. Active la casilla de verificación únicamente si identifica una anomalía.</p>
 
     <div id="referencias-contenedor"></div>
-    <div id="otros-contenedor"></div>
 
     <div class="actions-panel">
         <button class="btn-excel" onclick="enviarAExcel()">Guardar y Enviar Reporte</button>
@@ -430,8 +379,7 @@
 </div>
 
 <script>
-    // URL Única de tu Google Apps Script obtenida de tu captura de pantalla
-    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyX3IuQuL2Eqp-dm6DWjBXe0G0aZxlDWGSwBUNGKcejOhygjR7LNRkJkIbFlq6KCbxE/exec";
+    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxuvWu7c7y022dOAd2f-t2I1whlWR6nsb2wwcitSXoe4F0p5DvNTdKt92Zh3Q7yT-Ez/exec";
 
     const catalogoDeficiencias = [
         "Resbalones / Caídas / Trabajos en Alturas",
@@ -455,17 +403,9 @@
         area8: { titulo: "8.- MUELLE # 5 NORTE", puntos: ["ELEVADOR CANGILONES EC8/EC9", "TRANSPORTADOR TB1 NORTE/SUR", "TRANSPORTADOR TB21 / TB22/MODULO", "TRANSPORTADOR TB2 / TB3", "TOLVAS RECEPTORAS/ALMEJAS", "PLATAFORMA ALMEJAS (BURROS)", "EXTINTORES/SEÑALERICAS/GUARDAS", "ESCALERAS/PASAMANOS/BARANDALES"] }
     };
 
-    const otrosItems = [
-        "Calibración de Atmosferas", "Inspección de Escaleras Portátiles", "Inspección de Respirador (No adecuado)",
-        "Inspección de Tanque de Diesel", "Inspección a Unidades de Ferrocarril", "Inspección de Sistema Contra incendios",
-        "Inspección a extintor", "Prueba de GFCI", "Inspección Equipo Rescate Estructuras Granos",
-        "Contenido de Kit. Primeros auxilios", "Detector de CO2", "Prueba Anual válvula descarga compresor"
-    ];
-
     let puntosRegistrados = [];
 
     function inicializarApp() {
-        // Corrección de huso horario para fecha actual
         const ahora = new Date();
         const offset = ahora.getTimezoneOffset() * 60000;
         const fechaLocal = new Date(ahora - offset);
@@ -473,13 +413,11 @@
         
         const contenedorRef = document.getElementById('referencias-contenedor');
 
-        // Simplificación de nombres en catálogo para móvil
         let opcionesRiesgosHTML = `<option value="">-- Seleccione Riesgo --</option>`;
         catalogoDeficiencias.forEach(def => {
             opcionesRiesgosHTML += `<option value="${def}">${def}</option>`;
         });
 
-        // Cargar Áreas
         for (let id in baseDatosAreas) {
             let area = baseDatosAreas[id];
             let divArea = document.createElement('div');
@@ -518,42 +456,6 @@
             divArea.innerHTML = htmlContenido;
             contenedorRef.appendChild(divArea);
         }
-
-        // Cargar Especiales
-        const contenedorOtros = document.getElementById('otros-contenedor');
-        otrosItems.forEach((otro, index) => {
-            let itemId = `otro-item-${index}`;
-            puntosRegistrados.push({ id: itemId, area: "Especiales / Otros", nombrePunto: otro });
-
-            let divOtro = document.createElement('div');
-            divOtro.id = `wrapper-otro-${index}`;
-            divOtro.className = "reference-section-otros";
-            divOtro.style.display = "none";
-
-            divOtro.innerHTML = `
-                <h2>Controles Especiales</h2>
-                <div class="inspeccion-item" id="container-${itemId}">
-                    <div class="inspeccion-main">
-                        <label class="check-label">
-                            <input type="checkbox" id="${itemId}" onchange="evaluarRiesgo('${itemId}')">
-                            <span class="punto-texto">${otro}</span>
-                        </label>
-                        <span class="badge-estado" id="badge-${itemId}">Correcto</span>
-                    </div>
-                    <div class="panel-deficiencia" id="panel-${itemId}">
-                        <div class="form-group">
-                            <label>Riesgo Detectado</label>
-                            <select id="tipo-${itemId}">${opcionesRiesgosHTML}</select>
-                        </div>
-                        <div class="form-group">
-                            <label>Notas Específicas</label>
-                            <textarea id="obs-${itemId}" placeholder="Detalles de la anomalía..." rows="2"></textarea>
-                        </div>
-                    </div>
-                </div>
-            `;
-            contenedorOtros.appendChild(divOtro);
-        });
     }
 
     function cambiarArea() {
@@ -564,29 +466,8 @@
         
         if (areaSeleccionada) {
             document.getElementById('instruccion-texto').style.display = 'none';
-            document.getElementById('otros-select').value = "";
-            document.querySelectorAll('.reference-section-otros').forEach(s => s.style.display = 'none');
             document.getElementById(areaSeleccionada).style.display = 'block';
-            window.scrollTo(0, selectorArea.offsetTop - 20); // Scroll suave a la zona
-        } else {
-             document.getElementById('instruccion-texto').style.display = 'block';
-        }
-    }
-
-    function cambiarOtros() {
-        const selectorOtros = document.getElementById('otros-select');
-        const seleccion = selectorOtros.value;
-
-        document.querySelectorAll('.reference-section-otros').forEach(s => s.style.display = 'none');
-
-        if (seleccion) {
-            document.getElementById('instruccion-texto').style.display = 'none';
-            document.getElementById('area-select').value = "";
-            document.querySelectorAll('.reference-section').forEach(s => s.style.display = 'none');
-            
-            let index = seleccion.replace('otro', '');
-            document.getElementById(`wrapper-otro-${index}`).style.display = 'block';
-            window.scrollTo(0, selectorOtros.offsetTop - 20);
+            window.scrollTo(0, selectorArea.offsetTop - 20);
         } else {
              document.getElementById('instruccion-texto').style.display = 'block';
         }
@@ -624,7 +505,7 @@
 
         let deficienciasEncontradas = [];
         puntosRegistrados.forEach(p => {
-            if (document.getElementById(p.id).checked) {
+            if (document.getElementById(p.id) && document.getElementById(p.id).checked) {
                 let riesgoSeleccionado = document.getElementById(`tipo-${p.id}`).value;
                 let notasAdicionales = document.getElementById(`obs-${p.id}`).value.trim();
 
@@ -647,7 +528,6 @@
 
         if (deficienciasEncontradas.length === 0) {
             alert("✅ No se han registrado deficiencias. Inspección finalizada correctamente.");
-            // Opcional: enviar un registro de "Inspección Limpia" al Excel
             return;
         }
 
@@ -658,7 +538,6 @@
             reportes: deficienciasEncontradas
         };
 
-        // Feedback visual en el botón
         const btn = document.querySelector('.btn-excel');
         const textoOriginal = btn.innerText;
         btn.innerText = "Enviando...";
@@ -676,7 +555,7 @@
             btn.disabled = false;
             btn.style.opacity = '1';
             alert("🚀 Reporte enviado con éxito al tablero de control.");
-            location.reload(); // Recarga para limpiar formulario
+            location.reload();
         }).catch(err => {
             btn.innerText = textoOriginal;
             btn.disabled = false;
